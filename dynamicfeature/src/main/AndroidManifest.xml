@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dynamicfeature">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_dynamicfeature">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name=".FeatureActivity"
+            android:exported="true"
+            android:label="@string/title_activity_feature"
+            android:theme="@style/Theme.NavigationInFeatureModule" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="app" android:host="com.example.dynamicfeature.featurescreen2" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="app" android:host="com.example.dynamicfeature.featurescreen1" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="app" android:host="com.example.dynamicfeature.featurescreen3" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">navigation in Feature module</string>
+    <string name="title_dynamicfeature">DynamicFeature</string>
+    <string name="title_activity_feature">FeatureActivity</string>
+</resources>
